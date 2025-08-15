@@ -217,11 +217,11 @@ void baike()
 		}
 		cout<<"添加百科向导"<<endl;
 		cout<<"请输入百科名称"<<endl;
-		cin>>bk[l][1];
+		cin>>bk[bkl][1];
 		cout<<"请输入百科内容"<<endl;
-		cin>>bk[l][2];
+		cin>>bk[bkl][2];
 		cout<<"感谢添加！"<<endl;
-		l++;
+		bkl++;
 		system("pause");
 		return ;
 	}
@@ -230,7 +230,7 @@ void baike()
 		cout<<"请直接输入百科名称，将进行精确查找。"<<endl;
 		string bkcintmp;
 		cin>>bkcintmp;
-		for(int i=1;i<=l;i++)
+		for(int i=1;i<=bkl;i++)
 		{
 			if(a[i][1]==bkcintmp)
 			{
