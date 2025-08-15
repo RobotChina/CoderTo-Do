@@ -232,9 +232,9 @@ void baike()
 		cin>>bkcintmp;
 		for(int i=1;i<=bkl;i++)
 		{
-			if(a[i][1]==bkcintmp)
+			if(bk[i][1].find(bkcintmp)>=0)
 			{
-				cout<<a[i][2]<<endl;
+				cout<<bk[i][2]<<endl;
 				system("pause");
 				return ;
 			}
