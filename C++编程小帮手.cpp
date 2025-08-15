@@ -1,18 +1,18 @@
 #include<bits/stdc++.h>
 using namespace std;
-int l=0,y,r;
+int l=0,y,r,bkl=1;
 bool fintd[32],tdrwtj[32];
-string a[1001][6],tdtd[32][21];
+string a[1001][6],tdtd[32][21],ver="V0.1.1",bk[1010][3];
 void timeget()
 {
 	cout<<"我们需要获取当前时间。"<<endl;
 	cout<<"请依次输入月、日，中间用空格分隔。"<<endl;
 	cin>>y>>r;
-	if(y!=8 && y!=9)
+	if(y>=13)
 	{
-		cout<<"您的日期输入错误，或者您没有获取该程序的最新版本。请重试……"<<endl;
+		cout<<"您的日期输入错误，请重试……"<<endl;
 		timeget();
-	}
+	} 
 	system("cls");
 	return ;
 }
@@ -20,7 +20,7 @@ void about()
 {
 	system("cls");
 	cout<<"关于"<<endl;
-	cout<<"=============="<<endl;
+	cout<<"=============="<<endl; 
 	cout<<"按1键输入最新时间"<<endl;
 	cout<<"按0键安全退出程序"<<endl;
 	int abouttmp;
@@ -142,7 +142,7 @@ void tododay()
 		if(isfin==1)
 		{
 			fintd[r]=1;
-			cout<<"您今日任务已经全部完成啦！！！"<<endl;
+			cout<<"您今日任务已全部完成。"<<endl;
 			cout<<"去综合To-Do看看吧。"<<endl;
 			cout<<"是否前往？"<<endl;
 			int gototodo=0;
@@ -172,6 +172,8 @@ void todozh()
 	{
 		cout<<"请完成今日任务再来吧"<<endl;
 		system("pause");
+		system("cls");
+		tododay(); 
 		return ;
 	}
 	todo();
@@ -197,9 +199,54 @@ void todomain()
 		return ;
 	}
 }
+void baike()
+{
+	system("cls");
+	cout<<"百科"<<endl;
+	cout<<"============="<<endl;
+	cout<<"你要加入百科(1)还是查询百科(2)？"<<endl;
+	int bktmp;
+	cin>>bktmp;
+	if(bktmp==1)
+	{
+		if(bkl>=1000)
+		{
+			cout<<"你的百科数量太多了，暂不能添加。"<<endl;
+			system("pause");
+			return ;
+		}
+		cout<<"添加百科向导"<<endl;
+		cout<<"请输入百科名称"<<endl;
+		cin>>bk[l][1];
+		cout<<"请输入百科内容"<<endl;
+		cin>>bk[l][2];
+		cout<<"感谢添加！"<<endl;
+		l++;
+		system("pause");
+		return ;
+	}
+	else
+	{
+		cout<<"请直接输入百科名称，将进行精确查找。"<<endl;
+		string bkcintmp;
+		cin>>bkcintmp;
+		for(int i=1;i<=l;i++)
+		{
+			if(a[i][1]==bkcintmp)
+			{
+				cout<<a[i][2]<<endl;
+				system("pause");
+				return ;
+			}
+		}
+		cout<<"没有找到……换个搜索词试试吧，或者尝试添加。"<<endl;
+		system("pause");
+	}
+	return ;
+}
 int main()
 {
-	system("title 智慧编程小助手0.1.0");
+	system("title 智慧编程小助手");
 	timeget();
 	for(int i=1;i<r;i++)
 	{
@@ -222,28 +269,23 @@ int main()
 		cout<<"按2键     百科"<<endl;
 		cout<<"按3键     终生题库"<<endl;
 		cout<<"按4键     关于"<<endl;
-		cout<<"按5键     清理电脑(释放空间5GB+)"<<endl;
+		cout<<"按5键     清理电脑"<<endl;
 		/* TODO (Coder#4#): C++百科 */
 		/* TODO (Coder#5#): 终生题库 */
 		/* TODO (Coder#2#): 详细关于 */
 		cout<<"更多功能正在开发中"<<endl;
 		int mtmp;
 		cin>>mtmp;
-		if(mtmp==1)
-		{
-			todomain();
-		} 
+		if(mtmp==1)	todomain();
+		else if(mtmp==2)	baike();
 		else if(mtmp==4)	about(); 
 		else if(mtmp==5)
 		{
-		/* TODO (Codesearch#1#): 补充删除的内容 */
-			system("rmdir /s C:\\Users\\Robot\\AppData\\Local\\Temp");
-			system("rmdir /s C:\\Windows\\Temp");
-			system("rmdir /s C:\\Windows\\System32\\LogFiles");
-			system("rmdir /s C:\\Windows\\Prefetch");
-			system("rmdir /s C:\\Windows\\Help");
-			system("cleanmgr.exe /sagerun:10");
-			system("mem.exe --memory");
+			system("cleansystem.bat"); 
+			bool memtemp;
+			cout<<"是否清理内存？"<<endl;
+			cin>>memtemp;
+			if(memtemp==1)	system("mem.exe --memory");
 			system("pause");
 		}
 		else
@@ -254,5 +296,3 @@ int main()
 	}
 	return 0;
 }
-
-
