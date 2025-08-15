@@ -5,12 +5,12 @@ bool fintd[32],tdrwtj[32];
 string a[1001][6],tdtd[32][21];
 void timeget()
 {
-	cout<<"ÎÒÃÇĞèÒª»ñÈ¡µ±Ç°Ê±¼ä¡£"<<endl;
-	cout<<"ÇëÒÀ´ÎÊäÈëÔÂ¡¢ÈÕ£¬ÖĞ¼äÓÃ¿Õ¸ñ·Ö¸ô¡£"<<endl;
+	cout<<"æˆ‘ä»¬éœ€è¦è·å–å½“å‰æ—¶é—´ã€‚"<<endl;
+	cout<<"è¯·ä¾æ¬¡è¾“å…¥æœˆã€æ—¥ï¼Œä¸­é—´ç”¨ç©ºæ ¼åˆ†éš”ã€‚"<<endl;
 	cin>>y>>r;
 	if(y!=8 && y!=9)
 	{
-		cout<<"ÄúµÄÈÕÆÚÊäÈë´íÎó£¬»òÕßÄúÃ»ÓĞ»ñÈ¡¸Ã³ÌĞòµÄ×îĞÂ°æ±¾¡£ÇëÖØÊÔ¡­¡­"<<endl;
+		cout<<"æ‚¨çš„æ—¥æœŸè¾“å…¥é”™è¯¯ï¼Œæˆ–è€…æ‚¨æ²¡æœ‰è·å–è¯¥ç¨‹åºçš„æœ€æ–°ç‰ˆæœ¬ã€‚è¯·é‡è¯•â€¦â€¦"<<endl;
 		timeget();
 	}
 	system("cls");
@@ -19,10 +19,10 @@ void timeget()
 void about()
 {
 	system("cls");
-	cout<<"¹ØÓÚ"<<endl;
+	cout<<"å…³äº"<<endl;
 	cout<<"=============="<<endl;
-	cout<<"°´1¼üÊäÈë×îĞÂÊ±¼ä"<<endl;
-	cout<<"°´0¼ü°²È«ÍË³ö³ÌĞò"<<endl;
+	cout<<"æŒ‰1é”®è¾“å…¥æœ€æ–°æ—¶é—´"<<endl;
+	cout<<"æŒ‰0é”®å®‰å…¨é€€å‡ºç¨‹åº"<<endl;
 	int abouttmp;
 	cin>>abouttmp;
 	if(abouttmp==1)	
@@ -32,12 +32,12 @@ void about()
 	}
 	else if(abouttmp==0)
 	{
-		cout<<"ÓÉÓÚ¹Ø±ÕÊÇ¸ßÎ£²Ù×÷£¬ĞèÒªÊäÈëÎÄ±¾£º"<<endl;
-		cout<<"ÎÒÈ·ÈÏ×ÔÔ¸ÍË³ö²¢·ÅÆú³ÌĞòÖĞÎ´µ¼³öµÄÊı¾İ¡£"<<endl;
+		cout<<"ç”±äºå…³é—­æ˜¯é«˜å±æ“ä½œï¼Œéœ€è¦è¾“å…¥æ–‡æœ¬ï¼š"<<endl;
+		cout<<"æˆ‘ç¡®è®¤è‡ªæ„¿é€€å‡ºå¹¶æ”¾å¼ƒç¨‹åºä¸­æœªå¯¼å‡ºçš„æ•°æ®ã€‚"<<endl;
 		string aboutexittmp="";
 		cin>>aboutexittmp;
-		if(aboutexittmp=="ÎÒÈ·ÈÏ×ÔÔ¸ÍË³ö²¢·ÅÆú³ÌĞòÖĞÎ´µ¼³öµÄÊı¾İ¡£")	exit(0);
-		cout<<"ÄúÊäÈë´íÎó£¬ÇëÖØĞÂÊäÈë¡£"<<endl;
+		if(aboutexittmp=="æˆ‘ç¡®è®¤è‡ªæ„¿é€€å‡ºå¹¶æ”¾å¼ƒç¨‹åºä¸­æœªå¯¼å‡ºçš„æ•°æ®ã€‚")	exit(0);
+		cout<<"æ‚¨è¾“å…¥é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥ã€‚"<<endl;
 		system("pause");
 		return ; 
 	}
@@ -49,35 +49,35 @@ void todo()
 		system("cls"); 
 		cout<<"To-Do"<<endl;
 		cout<<"========================"<<endl;
-		cout<<"À´Ô´   ÌâºÅ   ÌâÃû   ×´Ì¬   ÍøÕ¾   ID"<<endl;
+		cout<<"æ¥æº   é¢˜å·   é¢˜å   çŠ¶æ€   ç½‘ç«™   ID"<<endl;
 		for(int i=1;i<=l;i++)
 		{
 			if(a[i][0]=="")	continue;
 			cout<<a[i][1]<<"  "<<a[i][2]<<"  "<<a[i][3]<<"  "<<a[i][4]<<"  "<<a[i][5]<<"  "<<i<<endl;
 		}
-		cout<<"°´1ĞŞ¸Ä£¬°´2Ìí¼Ó£¬°´3Íê³É£¬°´4ÍË³ö"<<endl;
+		cout<<"æŒ‰1ä¿®æ”¹ï¼ŒæŒ‰2æ·»åŠ ï¼ŒæŒ‰3å®Œæˆï¼ŒæŒ‰4é€€å‡º"<<endl;
 		int tmp;
 		cin>>tmp;
 		if(tmp==1)
 		{
-			cout<<"ĞŞ¸Ä"<<endl;
-			cout<<"ÇëÊäÈëĞŞ¸ÄĞòºÅ"<<endl;
+			cout<<"ä¿®æ”¹"<<endl;
+			cout<<"è¯·è¾“å…¥ä¿®æ”¹åºå·"<<endl;
 			int tmptmp;
 			cin>>tmptmp;
-			cout<<"ĞŞ¸Ä×´Ì¬£¿"<<endl;
-			cout<<"ÇëÊäÈë"<<endl;
+			cout<<"ä¿®æ”¹çŠ¶æ€ï¼Ÿ"<<endl;
+			cout<<"è¯·è¾“å…¥"<<endl;
 			cin>>a[tmptmp][4];
 			continue;
 		}
 		else if(tmp==2)
 		{
-			cout<<"Ìí¼Ó"<<endl;
+			cout<<"æ·»åŠ "<<endl;
 			if(l==1000)
 			{
-				cout<<"³¬³ö·¶Î§À²£¬Çë²»ÒªÔÙÌí¼Ó¡£"<<endl; 
+				cout<<"è¶…å‡ºèŒƒå›´å•¦ï¼Œè¯·ä¸è¦å†æ·»åŠ ã€‚"<<endl; 
 				continue;
 			}
-			cout<<"ÇëÊäÈëÀ´Ô´£¬ÌâºÅ£¬ÌâÃû£¬×´Ì¬£¬ÍøÕ¾£¬ÖĞ¼ä¿Õ¸ñ¡£"<<endl;
+			cout<<"è¯·è¾“å…¥æ¥æºï¼Œé¢˜å·ï¼Œé¢˜åï¼ŒçŠ¶æ€ï¼Œç½‘ç«™ï¼Œä¸­é—´ç©ºæ ¼ã€‚"<<endl;
 			l++;
 			cin>>a[l][1]>>a[l][2]>>a[l][3]>>a[l][4]>>a[l][5];
 			a[l][0]="1";
@@ -85,7 +85,7 @@ void todo()
 		}
 		else if(tmp==3) 
 		{
-			cout<<"ÇëÊäÈëÉ¾³ıµÄĞòºÅ"<<endl;
+			cout<<"è¯·è¾“å…¥åˆ é™¤çš„åºå·"<<endl;
 			int tmptmp;
 			cin>>tmptmp;
 			a[tmptmp][0]="";
@@ -107,23 +107,23 @@ void todo()
 void tododay()
 {
 	system("cls");
-	cout<<"ÎÒµÄÃ¿ÈÕÈÎÎñ"<<endl;
+	cout<<"æˆ‘çš„æ¯æ—¥ä»»åŠ¡"<<endl;
 	cout<<"================"<<endl;
 	if(tdrwtj[r]==0)
 	{
-		cout<<"Äú½ñÈÕ»¹Ã»ÓĞÌí¼ÓÈÎÎñ£¬ÇëÏÈÌí¼Ó¡£"<<endl;
-		cout<<"Äú½ñÈÕÓĞ¼¸ÏîÈÎÎñ£¿"<<endl;
+		cout<<"æ‚¨ä»Šæ—¥è¿˜æ²¡æœ‰æ·»åŠ ä»»åŠ¡ï¼Œè¯·å…ˆæ·»åŠ ã€‚"<<endl;
+		cout<<"æ‚¨ä»Šæ—¥æœ‰å‡ é¡¹ä»»åŠ¡ï¼Ÿ"<<endl;
 		int tmptdhow;
 		cin>>tmptdhow;
 		if(tmptdhow>20)
 		{
-			cout<<"Äú½ñÈÕÈÎÎñ¹ı¶à£¬Çë¼õÉÙ¡£"<<endl;
+			cout<<"æ‚¨ä»Šæ—¥ä»»åŠ¡è¿‡å¤šï¼Œè¯·å‡å°‘ã€‚"<<endl;
 			return ;
 		}
 		for(int i=1;i<=tmptdhow;i++)
 		{
-			cout<<"µÚ"<<i<<"¸öÈÎÎñ½éÉÜ"<<endl;
-			/* TODO (Users#3#): Ö§³Ö»»ĞĞÊäÈë */
+			cout<<"ç¬¬"<<i<<"ä¸ªä»»åŠ¡ä»‹ç»"<<endl;
+			/* TODO (Users#3#): æ”¯æŒæ¢è¡Œè¾“å…¥ */
 			cin>>tdtd[r][i];
 		}
 		tdrwtj[r]=1;
@@ -135,16 +135,16 @@ void tododay()
 		{
 			if(tdtd[r][i]!="")
 			{
-				cout<<"±àºÅ£º"<<i<<endl<<tdtd[r][i]<<endl<<endl<<endl;
+				cout<<"ç¼–å·ï¼š"<<i<<endl<<tdtd[r][i]<<endl<<endl<<endl;
 				isfin=0;
 			}
 		}
 		if(isfin==1)
 		{
 			fintd[r]=1;
-			cout<<"Äú½ñÈÕÈÎÎñÒÑ¾­È«²¿Íê³ÉÀ²£¡£¡£¡"<<endl;
-			cout<<"È¥×ÛºÏTo-Do¿´¿´°É¡£"<<endl;
-			cout<<"ÊÇ·ñÇ°Íù£¿"<<endl;
+			cout<<"æ‚¨ä»Šæ—¥ä»»åŠ¡å·²ç»å…¨éƒ¨å®Œæˆå•¦ï¼ï¼ï¼"<<endl;
+			cout<<"å»ç»¼åˆTo-Doçœ‹çœ‹å§ã€‚"<<endl;
+			cout<<"æ˜¯å¦å‰å¾€ï¼Ÿ"<<endl;
 			int gototodo=0;
 			cin>>gototodo;
 			if(gototodo==0)	return ;
@@ -154,7 +154,7 @@ void tododay()
 				return ;
 			}
 		}
-		cout<<"ÊÇ·ñÍê³É£¿(0/±àºÅ)"<<endl;
+		cout<<"æ˜¯å¦å®Œæˆï¼Ÿ(0/ç¼–å·)"<<endl;
 		int tmptdtmp;
 		cin>>tmptdtmp;
 		if(tmptdtmp==0)	return;
@@ -170,7 +170,7 @@ void todozh()
 {
 	if(fintd[r]==0)
 	{
-		cout<<"ÇëÍê³É½ñÈÕÈÎÎñÔÙÀ´°É"<<endl;
+		cout<<"è¯·å®Œæˆä»Šæ—¥ä»»åŠ¡å†æ¥å§"<<endl;
 		system("pause");
 		return ;
 	}
@@ -179,9 +179,9 @@ void todozh()
 void todomain()
 {
 	system("cls");
-	cout<<"°´1¼ü½øÈëÃ¿ÈÕÈÎÎñ"<<endl;
-	cout<<"°´2¼ü½øÈë×ÛºÏÁ·Ï°"<<endl;
-	cout<<"°´0¼üÍË³öTo-Do³ÌĞò"<<endl;
+	cout<<"æŒ‰1é”®è¿›å…¥æ¯æ—¥ä»»åŠ¡"<<endl;
+	cout<<"æŒ‰2é”®è¿›å…¥ç»¼åˆç»ƒä¹ "<<endl;
+	cout<<"æŒ‰0é”®é€€å‡ºTo-Doç¨‹åº"<<endl;
 	int todomaintmp;
 	cin>>todomaintmp;
 	if(todomaintmp==1)
@@ -199,7 +199,7 @@ void todomain()
 }
 int main()
 {
-	system("title ÖÇ»Û±à³ÌĞ¡ÖúÊÖ2.0   ÖÇ»ÛÁ÷³©¡¤AIÉı¼¶¡¤ĞéÄâ¼ÆËã¼¼Êõ3.0¡¤Ñ¸ÃÍÏµÍ³×ÊÔ´µ÷¶È»úÖÆ");
+	system("title æ™ºæ…§ç¼–ç¨‹å°åŠ©æ‰‹0.1.0");
 	timeget();
 	for(int i=1;i<r;i++)
 	{
@@ -216,17 +216,17 @@ int main()
 	while(1)
 	{
 		system("cls");
-		cout<<"ÖÇ»Û±à³ÌĞ¡ÖúÊÖ"<<endl;
+		cout<<"æ™ºæ…§ç¼–ç¨‹å°åŠ©æ‰‹"<<endl;
 		cout<<"========================="<<endl; 
-		cout<<"°´1¼ü     To-Do"<<endl;
-		cout<<"°´2¼ü     C++°Ù¿Æ"<<endl;
-		cout<<"°´3¼ü     ÖÕÉúÌâ¿â"<<endl;
-		cout<<"°´4¼ü     ¹ØÓÚ"<<endl;
-		cout<<"°´5¼ü     ÇåÀíµçÄÔ(ÊÍ·Å¿Õ¼ä5GB+)"<<endl;
-		/* TODO (Coder#4#): C++°Ù¿Æ */
-		/* TODO (Coder#5#): ÖÕÉúÌâ¿â */
-		/* TODO (Coder#2#): ÏêÏ¸¹ØÓÚ */
-		cout<<"¸ü¶à¹¦ÄÜÕıÔÚ¿ª·¢ÖĞ"<<endl;
+		cout<<"æŒ‰1é”®     To-Do"<<endl;
+		cout<<"æŒ‰2é”®     ç™¾ç§‘"<<endl;
+		cout<<"æŒ‰3é”®     ç»ˆç”Ÿé¢˜åº“"<<endl;
+		cout<<"æŒ‰4é”®     å…³äº"<<endl;
+		cout<<"æŒ‰5é”®     æ¸…ç†ç”µè„‘(é‡Šæ”¾ç©ºé—´5GB+)"<<endl;
+		/* TODO (Coder#4#): C++ç™¾ç§‘ */
+		/* TODO (Coder#5#): ç»ˆç”Ÿé¢˜åº“ */
+		/* TODO (Coder#2#): è¯¦ç»†å…³äº */
+		cout<<"æ›´å¤šåŠŸèƒ½æ­£åœ¨å¼€å‘ä¸­"<<endl;
 		int mtmp;
 		cin>>mtmp;
 		if(mtmp==1)
@@ -236,7 +236,7 @@ int main()
 		else if(mtmp==4)	about(); 
 		else if(mtmp==5)
 		{
-		/* TODO (Codesearch#1#): ²¹³äÉ¾³ıµÄÄÚÈİ */
+		/* TODO (Codesearch#1#): è¡¥å……åˆ é™¤çš„å†…å®¹ */
 			system("rmdir /s C:\\Users\\Robot\\AppData\\Local\\Temp");
 			system("rmdir /s C:\\Windows\\Temp");
 			system("rmdir /s C:\\Windows\\System32\\LogFiles");
@@ -248,10 +248,11 @@ int main()
 		}
 		else
 		{
-			cout<<"ºÜ±§Ç¸£¬ÎÒÃ»ÓĞÀí½â£¬ÇëÊäÈëºÏ·¨Êı×Ö"<<endl; 
+			cout<<"å¾ˆæŠ±æ­‰ï¼Œæˆ‘æ²¡æœ‰ç†è§£ï¼Œè¯·è¾“å…¥åˆæ³•æ•°å­—"<<endl; 
 			system("pause");
 		}
 	}
 	return 0;
 }
+
 
